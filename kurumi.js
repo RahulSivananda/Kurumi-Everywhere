@@ -1,4 +1,4 @@
-window.setInterval(myCallback, 100);
+window.setInterval(myCallback, 1000);
 function myCallback() {
   kurumiChwaaaan();
 }
