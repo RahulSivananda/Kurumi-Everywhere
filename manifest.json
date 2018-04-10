@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "KurumiEverywhere",
+  "version": "1.0",
+  "description": "Replaces all images in every websites to kawaii images of Tokisaki Kurumi.",
+  "icons": {
+    "48": "icons/icon.jpg"
+  },
+  "web_accessible_resources": [
+  "images/*.jpg"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["kurumi.js"]
+    }
+  ]
+}
