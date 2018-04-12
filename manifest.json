@@ -4,15 +4,23 @@
   "version": "1.0",
   "description": "Replaces all images in every websites to kawaii images of Tokisaki Kurumi.",
   "icons": {
-    "48": "icons/icon.jpg"
+    "48": "icons/icon.png"
   },
-  "web_accessible_resources": [
-  "images/*.jpg"
+  "permissions": [
+    "activeTab",
+    "tabs"
   ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["kurumi.js"]
-    }
-  ]
+  "web_accessible_resources": [
+    "images/*.jpg"
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["kurumi.js"]
+  }],
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": "icons/icon.png",
+    "default_title": "Kurumi chan",
+    "default_popup": "popup/kurumi.html"
+  }
 }
