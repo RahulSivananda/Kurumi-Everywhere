@@ -42,6 +42,7 @@
     for (let img of tmp) {
       if (!imagePresent(img)) {
         let oPath = img.src;
+        if(oPath.toLowerCase().indexOf("kurumi") > -1 || oPath.toLowerCase().indexOf("tokisaki") > -1) continue;
         window.images.push([img, oPath]);
         let index = Math.floor(Math.random() * files.length);
         img.src = browser.extension.getURL(path + files[index]);
@@ -68,3 +69,4 @@
   kawaiify();
 
 })();
+x
